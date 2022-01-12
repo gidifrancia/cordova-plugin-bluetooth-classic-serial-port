@@ -40,7 +40,8 @@
     // Make sure we have a callback method to fire
     if (self.subscribeCallbackId != nil) {
 
-        NSString *message = [self readUntilDelimiter:self.readDelimiter];
+        NSString *message = [NSString stringWithString:[self read]];
+
         if ([message length] > 0) {
             CDVPluginResult *pluginResult = nil;
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString: message];

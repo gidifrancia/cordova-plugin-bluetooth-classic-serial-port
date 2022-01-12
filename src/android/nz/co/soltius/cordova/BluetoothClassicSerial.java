@@ -496,7 +496,7 @@ public class BluetoothClassicSerial extends CordovaPlugin {
         }
         private void sendDataToSubscriber() {
 
-            String data = readUntil(delimiter);
+            String data = read();
 
             if (data != null && data.length() > 0) {
                 PluginResult result = new PluginResult(PluginResult.Status.OK, data);
