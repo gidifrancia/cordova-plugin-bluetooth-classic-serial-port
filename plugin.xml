@@ -18,6 +18,8 @@
 
     <platform name="android">
 
+        <hook type="after_prepare" src="hooks/after_prepare.js"/>
+
         <config-file target="res/xml/config.xml" parent="/widget">
             <feature name="BluetoothClassicSerial">
                 <param name="android-package" value="nz.co.soltius.cordova.BluetoothClassicSerial"/>
